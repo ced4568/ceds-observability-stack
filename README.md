@@ -107,6 +107,22 @@ flowchart TD
 
 ---
 
+## 📸 Dashboards
+
+### Infrastructure Overview
+Infrastructure Dashboard
+
+### K3s Cluster Dashboard
+K3s Dashboard
+
+### Proxmox HA Dashboard
+Proxmox Dashboard
+
+### Service Uptime Dashboard
+Services Dashboard
+
+---
+
 ## ⚙️ Core Components
 
 ### 📡 Prometheus
