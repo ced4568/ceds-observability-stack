@@ -1,0 +1,58 @@
+groups:
+  - name: homelab-node-alerts
+    rules:
+      - alert: NodeDown
+        expr: up == 0
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Node or service is down"
+          description: "{{ $labels.instance }} has been unreachable for more than 2 minutes."
+
+      - alert: HighCPUUsage
+        expr: 100 - (avg by(instance)(rate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) > 85
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High CPU usage detected"
+          description: "{{ $labels.instance }} CPU usage is above 85%."
+
+      - alert: HighMemoryUsage
+        expr: (1 - (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes)) * 100 > 85
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High memory usage detected"
+          description: "{{ $labels.instance }} memory usage is above 85%."
+
+      - alert: LowDiskSpace
+        expr: (1 - (node_filesystem_avail_bytes{fstype!~"tmpfs|overlay"} / node_filesystem_size_bytes{fstype!~"tmpfs|overlay"})) * 100 > 85
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Low disk space"
+          description: "{{ $labels.instance }} disk usage is above 85%."
+
+  - name: homelab-service-alerts
+    rules:
+      - alert: ServiceUnavailable
+        expr: probe_success == 0
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Service unavailable"
+          description: "{{ $labels.instance }} failed the health check."
+
+      - alert: SlowServiceResponse
+        expr: probe_duration_seconds > 2
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Slow service response"
+          description: "{{ $labels.instance }} response time is greater than 2 seconds."
