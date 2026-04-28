@@ -23,3 +23,7 @@ Thumbs.db
 # Local configs
 local/
 private/
+
+# Editor
+.vscode/
+.idea/
