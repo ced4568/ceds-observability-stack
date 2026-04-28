@@ -42,6 +42,37 @@ It simulates real-world **SRE / Platform Engineering environments**, delivering:
 
 ---
 
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Linux server or VM
+- Python 3 installed
+- Prometheus installed
+- Grafana installed
+- Network access to homelab systems
+
+---
+
+### Run Service Health Check
+
+bash python3 scripts/service-health-check.py 
+
+---
+
+### Run Prometheus
+
+bash prometheus --config.file=prometheus/prometheus.yml 
+
+---
+
+### Access Services
+
+- Prometheus: http://localhost:9090
+- Grafana: http://localhost:3000
+
+---
+
 ## 📡 Monitored Systems
 
 | Target                  | Example Metrics                      |
