@@ -268,6 +268,57 @@ http://<your-server-ip>:3000
 
 ---
 
+## 🔗 Integration
+
+This observability stack is part of a larger ecosystem:
+
+- Ced’s HomeLab → Infrastructure layer
+- Ced’s Observability Stack → Metrics + monitoring layer
+- Ced’s NOC → Visualization and operations layer
+
+Data flows from monitored systems into Prometheus, is visualized in Grafana, and feeds Ced’s NOC dashboard for real-time system visibility.
+
+---
+
+## 🧪 Verification
+
+To verify the system is working correctly:
+
+### Prometheus Targets
+
+- Navigate to: http://localhost:9090/targets
+- Confirm all targets show UP
+
+---
+
+### Node Exporter
+
+bash curl http://<node-ip>:9100/metrics 
+
+---
+
+### Service Health Check
+
+bash python3 scripts/service-health-check.py 
+
+---
+
+### Grafana
+
+- Confirm dashboards display real-time metrics
+- Verify data source connection to Prometheus
+- Check for active alerts
+
+---
+
+### Alert Testing
+
+- Stop a service or node temporarily
+- Confirm alert triggers in Prometheus
+- Confirm alert appears in Grafana
+
+---
+
 ## 📌 Status
 
 🟢 **Active Development**
@@ -284,5 +335,19 @@ This repository demonstrates the ability to:
 * Implement **observability at scale**
 * Build **production-style monitoring stacks**
 * Apply **real-world SRE practices**
+
+---
+
+## 🧠 Future Improvements 
+
+- Loki log aggregation
+- Tempo tracing
+- Cloudflare Access log ingestion
+- Automated remediation (self-healing infrastructure)
+- Grafana public demo dashboard
+- GitOps-based deployment (Argo CD / Flux)
+- Multi-cluster Kubernetes monitoring
+
+---
 
 > 🚀 Designed as a **portfolio-grade project** for career growth, promotion, and technical leadership visibility.
