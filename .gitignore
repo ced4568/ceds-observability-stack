@@ -1,1 +1,25 @@
+# Secrets
+.env
+*.env
+secrets/
+credentials/
+tokens/
+*.key
+*.pem
 
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Local configs
+local/
+private/
