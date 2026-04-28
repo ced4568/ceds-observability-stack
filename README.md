@@ -176,9 +176,7 @@ ceds-observability-stack/
 
 ---
 
-## 📸 Dashboard Preview (Add Your Screenshots)
-
-> 📌 Replace with real screenshots from your Grafana dashboards
+## 📸 Dashboard Preview
 
 * 🔹 Infrastructure Overview
 * 🔹 K3s Cluster Health
