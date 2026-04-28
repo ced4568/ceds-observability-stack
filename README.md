@@ -327,14 +327,22 @@ This project is continuously evolving as part of Ced’s HomeLab ecosystem and p
 
 ---
 
-## 💼 Why This Project Matters
+## 💡 Why This Project Matters
 
-This repository demonstrates the ability to:
+This project simulates a production-style observability system used in modern infrastructure environments.
 
-* Design and operate **distributed systems**
-* Implement **observability at scale**
-* Build **production-style monitoring stacks**
-* Apply **real-world SRE practices**
+It is designed to demonstrate how distributed systems are monitored, analyzed, and maintained in real-world engineering teams.
+
+Key capabilities include:
+
+- Monitoring a hybrid infrastructure environment (Proxmox HA + K3s cluster)
+- Collecting and visualizing system and service metrics
+- Tracking service availability and uptime
+- Detecting infrastructure and application-level failures
+- Supporting alert-driven operations
+- Integrating with a centralized NOC dashboard
+
+This project represents a shift from running infrastructure to actively operating and maintaining it using observability principles aligned with SRE and platform engineering practice
 
 ---
 
