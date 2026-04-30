@@ -368,4 +368,45 @@ This project represents a shift from running infrastructure to actively operatin
 
 ---
 
-> 🚀 Designed as a **portfolio-grade project** for career growth, promotion, and technical leadership visibility.
+## Current Deployment Status
+
+Ced’s Observability Stack is now actively collecting live metrics from Ced’s HomeLab.
+
+Current working components:
+
+- Prometheus metrics collection
+- Grafana dashboard visualization
+- Proxmox node exporter monitoring
+- K3s node exporter monitoring
+- kube-state-metrics for Kubernetes object state
+- Windows exporter for PrimeStation
+- Blackbox HTTP/TCP endpoint probing
+- TrueNAS Graphite exporter
+- UniFi exporter using Unpoller
+
+Some Grafana panels are being refined as dashboard queries are aligned with available Prometheus metrics.
+
+---
+
+## Production Dashboards
+
+| Dashboard | Purpose |
+|---|---|
+| Ced's NOC - Production Command Center v3 | Stable executive NOC view for service availability, K3s, Proxmox, PrimeStation, and latency |
+| Ced's NOC - Deep Observability v3 | Full drill-down dashboard for Proxmox, K3s, services, UniFi, PrimeStation, and alerts |
+| Ced's K3s Elite Observability v1 | Dedicated K3s dashboard using node-exporter and kube-state-metrics |
+
+---
+
+## Phase 3 Live Metrics Milestone
+
+- [x] Prometheus running
+- [x] Grafana connected to Prometheus
+- [x] Proxmox node exporters reporting
+- [x] K3s node exporters reporting
+- [x] kube-state-metrics installed and reporting
+- [x] Windows exporter reporting
+- [x] Blackbox Exporter repaired
+- [x] Internal HTTP probes working
+- [x] UniFi exporter installed
+- [x] Grafana dashboards receiving live data
