@@ -46,30 +46,34 @@ It simulates real-world **SRE / Platform Engineering environments**, delivering:
 
 ### Prerequisites
 
-- Linux server or VM
-- Python 3 installed
-- Prometheus installed
-- Grafana installed
-- Network access to homelab systems
+* Linux server or VM
+* Python 3 installed
+* Prometheus installed
+* Grafana installed
+* Network access to homelab systems
 
 ---
 
 ### Run Service Health Check
 
-bash python3 scripts/service-health-check.py 
+```bash
+python3 scripts/service-health-check.py
+```
 
 ---
 
 ### Run Prometheus
 
-bash prometheus --config.file=prometheus/prometheus.yml 
+```bash
+prometheus --config.file=prometheus/prometheus.yml
+```
 
 ---
 
 ### Access Services
 
-- Prometheus: http://localhost:9090
-- Grafana: http://localhost:3000
+* Prometheus: http://localhost:9090
+* Grafana: http://localhost:3000
 
 ---
 
@@ -110,15 +114,19 @@ flowchart TD
 ## 📸 Dashboards
 
 ### Infrastructure Overview
+
 Infrastructure Dashboard
 
 ### K3s Cluster Dashboard
+
 K3s Dashboard
 
 ### Proxmox HA Dashboard
+
 Proxmox Dashboard
 
 ### Service Uptime Dashboard
+
 Services Dashboard
 
 ---
@@ -270,9 +278,9 @@ http://<your-server-ip>:3000
 
 This observability stack is part of a larger ecosystem:
 
-- Ced’s HomeLab → Infrastructure layer
-- Ced’s Observability Stack → Metrics + monitoring layer
-- Ced’s NOC → Visualization and operations layer
+* Ced’s HomeLab → Infrastructure layer
+* Ced’s Observability Stack → Metrics + monitoring layer
+* Ced’s NOC → Visualization and operations layer
 
 Data flows from monitored systems into Prometheus, is visualized in Grafana, and feeds Ced’s NOC dashboard for real-time system visibility.
 
@@ -284,36 +292,40 @@ To verify the system is working correctly:
 
 ### Prometheus Targets
 
-- Navigate to: http://localhost:9090/targets
-- Confirm all targets show UP
+* Navigate to: http://localhost:9090/targets
+* Confirm all targets show UP
 
 ---
 
 ### Node Exporter
 
-bash curl http://<node-ip>:9100/metrics 
+```bash
+curl http://<node-ip>:9100/metrics
+```
 
 ---
 
 ### Service Health Check
 
-bash python3 scripts/service-health-check.py 
+```bash
+python3 scripts/service-health-check.py
+```
 
 ---
 
 ### Grafana
 
-- Confirm dashboards display real-time metrics
-- Verify data source connection to Prometheus
-- Check for active alerts
+* Confirm dashboards display real-time metrics
+* Verify data source connection to Prometheus
+* Check for active alerts
 
 ---
 
 ### Alert Testing
 
-- Stop a service or node temporarily
-- Confirm alert triggers in Prometheus
-- Confirm alert appears in Grafana
+* Stop a service or node temporarily
+* Confirm alert triggers in Prometheus
+* Confirm alert appears in Grafana
 
 ---
 
@@ -333,26 +345,26 @@ It is designed to demonstrate how distributed systems are monitored, analyzed, a
 
 Key capabilities include:
 
-- Monitoring a hybrid infrastructure environment (Proxmox HA + K3s cluster)
-- Collecting and visualizing system and service metrics
-- Tracking service availability and uptime
-- Detecting infrastructure and application-level failures
-- Supporting alert-driven operations
-- Integrating with a centralized NOC dashboard
+* Monitoring a hybrid infrastructure environment (Proxmox HA + K3s cluster)
+* Collecting and visualizing system and service metrics
+* Tracking service availability and uptime
+* Detecting infrastructure and application-level failures
+* Supporting alert-driven operations
+* Integrating with a centralized NOC dashboard
 
-This project represents a shift from running infrastructure to actively operating and maintaining it using observability principles aligned with SRE and platform engineering practice
+This project represents a shift from running infrastructure to actively operating and maintaining it using observability principles aligned with SRE and platform engineering practices.
 
 ---
 
-## 🧠 Future Improvements 
+## 🧠 Future Improvements
 
-- Loki log aggregation
-- Tempo tracing
-- Cloudflare Access log ingestion
-- Automated remediation (self-healing infrastructure)
-- Grafana public demo dashboard
-- GitOps-based deployment (Argo CD / Flux)
-- Multi-cluster Kubernetes monitoring
+* Loki log aggregation
+* Tempo tracing
+* Cloudflare Access log ingestion
+* Automated remediation (self-healing infrastructure)
+* Grafana public demo dashboard
+* GitOps-based deployment (Argo CD / Flux)
+* Multi-cluster Kubernetes monitoring
 
 ---
 
