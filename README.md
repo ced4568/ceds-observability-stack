@@ -247,5 +247,6 @@ Digital Systems Engineer · GE Aerospace · Oxford, MS
 [![Portfolio](https://img.shields.io/badge/Portfolio-chasedumphord.com-0F6E56?style=flat-square)](https://chasedumphord.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-chase--dumphord-0A66C2?style=flat-square)](https://www.linkedin.com/in/chase-dumphord/)
 [![GitHub](https://img.shields.io/badge/GitHub-ced4568-181717?style=flat-square)](https://github.com/ced4568)
+[![Prometheus](https://img.shields.io/badge/Prometheus-Live%20%28Login%20Required%29-E6522C?style=flat-square)](https://prometheus.cedshomelab.com)
 [![Grafana](https://img.shields.io/badge/Grafana-Live%20%28Login%20Required%29-F46800?style=flat-square)](https://grafana.cedshomelab.com)
 [![Live NOC](https://img.shields.io/badge/NOC-noc.chasedumphord.com-1D9E75?style=flat-square)](https://noc.chasedumphord.com)
