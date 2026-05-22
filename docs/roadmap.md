@@ -1,50 +1,47 @@
-
-
-```markdown
 # Project Roadmap
 
-## Phase 1 — Repo Foundation
+## Phase 1 Repo Foundation
 
-- [ ] Create repo
-- [ ] Add README
-- [ ] Add architecture document
-- [ ] Add setup guide
-- [ ] Add roadmap
+- [x] Create repo
+- [x] Add README
+- [x] Add architecture document
+- [x] Add setup guide
+- [x] Add roadmap
 - [ ] Add troubleshooting guide
 
 ---
 
-## Phase 2 — Metrics Foundation
+## Phase 2 Metrics Foundation
 
-- [ ] Install node exporter
-- [ ] Add Prometheus config
-- [ ] Add K3s node targets
-- [ ] Add Proxmox target
-- [ ] Add service uptime checks
-
----
-
-## Phase 3 — Grafana Dashboards
-
-- [ ] Add Prometheus datasource
-- [ ] Build infrastructure dashboard
-- [ ] Build K3s dashboard
-- [ ] Build Proxmox dashboard
-- [ ] Build service uptime dashboard
+- [x] Install node exporter
+- [x] Add Prometheus config
+- [x] Add K3s node targets
+- [x] Add Proxmox target
+- [x] Add service uptime checks
 
 ---
 
-## Phase 4 — Alerting
+## Phase 3 Grafana Dashboards
+
+- [x] Add Prometheus datasource
+- [x] Build infrastructure dashboard
+- [x] Build K3s dashboard
+- [x] Build Proxmox dashboard
+- [x] Build service uptime dashboard
+
+---
+
+## Phase 4 Alerting
 
 - [ ] Add alert rules
-- [ ] Add Alertmanager
+- [x] Add Alertmanager
 - [ ] Test node down alert
 - [ ] Test service down alert
 - [ ] Document alert response process
 
 ---
 
-## Phase 5 — Advanced Observability
+## Phase 5 Advanced Observability
 
 - [ ] Add Loki for logs
 - [ ] Add Cloudflare access logs
@@ -54,11 +51,11 @@
 
 ---
 
-## Phase 6 — Portfolio Polish
+## Phase 6 Portfolio Polish
 
-- [ ] Add screenshots
-- [ ] Add architecture diagram image
-- [ ] Add demo dashboard image
-- [ ] Link to Ced’s HomeLab repo
-- [ ] Link to Ced’s NOC repo
+- [x] Add screenshots
+- [x] Add architecture diagram image
+- [x] Add demo dashboard image
+- [x] Link to Ced's HomeLab repo
+- [x] Link to Ced's NOC repo
 - [ ] Add project summary to portfolio website

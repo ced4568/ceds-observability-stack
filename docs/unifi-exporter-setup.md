@@ -20,71 +20,87 @@ Unpoller
 
 ---
 
-## Step 1 — Create UniFi Monitoring User
+## Step 1 Create UniFi Monitoring User
 
 In the UniFi Network application, create a local monitoring user.
 
 Recommended settings:
 
-Username: prometheus  
-Role: Read-only or limited admin  
+Username: prometheus
+Role: Read-only or limited admin
 
 Do not commit the password to GitHub.
 
 ---
 
-## Step 2 — Run UniFi Exporter / Unpoller
+## Step 2 Run UniFi Exporter / Unpoller
 
 Replace the password before running:
 
+```bash
 docker run -d \
   --name unifi-exporter \
   --restart unless-stopped \
   -p 9130:9130 \
-  -e UP_UNIFI_DEFAULT_URL="https://10.10.1.1" \
+  -e UP_UNIFI_DEFAULT_URL="https://<unifi-controller-ip>" \
   -e UP_UNIFI_DEFAULT_USER="prometheus" \
   -e UP_UNIFI_DEFAULT_PASS="REPLACE_WITH_YOUR_PASSWORD" \
   -e UP_UNIFI_DEFAULT_VERIFY_SSL="false" \
   -e UP_PROMETHEUS_HTTP_LISTEN="0.0.0.0:9130" \
   ghcr.io/unpoller/unpoller:latest
+```
 
 ---
 
-## Step 3 — Verify Container Is Running
+## Step 3 Verify Container Is Running
 
+```bash
 docker ps --format "table {{.Names}}\t{{.Ports}}\t{{.Status}}"
+```
 
 Expected result:
 
+```
 unifi-exporter    0.0.0.0:9130->9130/tcp    Up
+```
 
 ---
 
-## Step 4 — Test Metrics Endpoint
+## Step 4 Test Metrics Endpoint
 
-curl http://10.10.30.140:9130/metrics
+```bash
+curl http://<exporter-host-ip>:9130/metrics
+```
 
 Expected result:
 
+```
 UniFi metrics output
+```
 
 ---
 
-## Step 5 — Restart Prometheus
+## Step 5 Restart Prometheus
 
+```bash
 systemctl restart prometheus
+```
 
 ---
 
-## Step 6 — Confirm in Prometheus
+## Step 6 Confirm in Prometheus
 
 Open:
 
-http://10.10.30.140:9090/targets
+```
+http://<prometheus-host-ip>:9090/targets
+```
 
 Expected:
 
+```
 unifi-exporter    UP
+```
 
 ---
 
@@ -92,16 +108,18 @@ unifi-exporter    UP
 
 Add this to prometheus.yml if not present:
 
+```yaml
 - job_name: "unifi-exporter"
   static_configs:
     - targets:
-        - "10.10.30.140:9130"
+        - "<exporter-host-ip>:9130"
       labels:
         instance: "unifi-exporter"
         service: "unifi"
         role: "network"
         vendor: "unifi"
         site: "ceds-homelab"
+```
 
 ---
 
@@ -114,8 +132,10 @@ Exporter not running or not bound to port 9130.
 
 Fix:
 
+```bash
 docker ps --format "table {{.Names}}\t{{.Ports}}\t{{.Status}}"
 docker restart unifi-exporter
+```
 
 ---
 
@@ -133,15 +153,21 @@ Update credentials and restart container.
 
 Test exporter:
 
-curl http://10.10.30.140:9130/metrics
+```bash
+curl http://<exporter-host-ip>:9130/metrics
+```
 
 Check Prometheus config:
 
+```bash
 promtool check config /etc/prometheus/prometheus.yml
+```
 
 Restart Prometheus:
 
+```bash
 systemctl restart prometheus
+```
 
 ---
 
@@ -157,7 +183,9 @@ Never commit:
 
 Use placeholders:
 
+```
 REPLACE_WITH_YOUR_PASSWORD
+```
 
 ---
 
@@ -165,6 +193,8 @@ REPLACE_WITH_YOUR_PASSWORD
 
 When complete, Prometheus should show:
 
+```
 unifi-exporter    UP
+```
 
 Grafana dashboards can now use UniFi metrics.
