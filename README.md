@@ -1,6 +1,6 @@
 # Ced's Observability Stack Production Monitoring Platform
 
-> A production-style observability platform delivering full stack visibility across a hybrid homelab infrastructure Proxmox HA cluster, 12 node K3s cluster, network gear, storage, and edge systems. Built on Prometheus, Grafana, and Alertmanager with live dashboards running 24/7.
+> A production style observability platform delivering full stack visibility across a hybrid homelab infrastructure Proxmox HA cluster, 12 node K3s cluster, network gear, storage, and edge systems. Built on Prometheus, Grafana, and Alertmanager with live dashboards running 24/7.
 
 [![NOC Health](https://img.shields.io/badge/NOC%20Health-100%25-1D9E75?style=flat-square)](#production-dashboards)
 [![Grafana](https://img.shields.io/badge/Grafana-Live-F46800?style=flat-square)](https://grafana.cedshomelab.com)
