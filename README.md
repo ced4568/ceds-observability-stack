@@ -1,6 +1,6 @@
-# Ced's Observability Stack — Production Monitoring Platform
+# Ced's Observability Stack Production Monitoring Platform
 
-> A production-style observability platform delivering full-stack visibility across a hybrid homelab infrastructure — Proxmox HA cluster, 12-node K3s cluster, network gear, storage, and edge systems. Built on Prometheus, Grafana, and Alertmanager with live dashboards running 24/7.
+> A production-style observability platform delivering full-stack visibility across a hybrid homelab infrastructure Proxmox HA cluster, 12-node K3s cluster, network gear, storage, and edge systems. Built on Prometheus, Grafana, and Alertmanager with live dashboards running 24/7.
 
 [![NOC Health](https://img.shields.io/badge/NOC%20Health-100%25-1D9E75?style=flat-square)](#production-dashboards)
 [![Grafana](https://img.shields.io/badge/Grafana-Live-F46800?style=flat-square)](https://grafana.cedshomelab.com)
@@ -12,9 +12,9 @@
 
 ## What This Is
 
-This is the observability layer for Ced's HomeLab — the system that answers the question: *"Is everything actually working?"*
+This is the observability layer for Ced's HomeLab the system that answers the question: *"Is everything actually working?"*
 
-It collects metrics from every layer of the infrastructure stack, visualizes them in purpose-built Grafana dashboards, and routes alerts through Alertmanager when something breaks. Three production dashboards serve different operational needs — an executive NOC view for quick status checks, a deep drill-down dashboard for troubleshooting, and a dedicated K3s cluster dashboard for Kubernetes visibility.
+It collects metrics from every layer of the infrastructure stack, visualizes them in purpose-built Grafana dashboards, and routes alerts through Alertmanager when something breaks. Three production dashboards serve different operational needs an executive NOC view for quick status checks, a deep drill-down dashboard for troubleshooting, and a dedicated K3s cluster dashboard for Kubernetes visibility.
 
 This isn't a demo. Prometheus is actively scraping targets. Grafana is displaying live data. The dashboards have been through real incidents and refined based on what actually matters during an outage.
 
@@ -62,7 +62,7 @@ flowchart TD
 
 ## Production Dashboards
 
-Three purpose-built dashboards serving different operational needs. All live at `grafana.cedshomelab.com`.
+Three purpose built dashboards serving different operational needs. All live at `grafana.cedshomelab.com`.
 
 ### Production Command Center v3
 
@@ -144,18 +144,18 @@ Every metric source in the infrastructure is actively scraped by Prometheus.
 
 | System | Monitoring Status |
 |--------|------------------|
-| Proxmox HA Cluster (6 nodes) | ✅ Live — node exporter + Proxmox exporter |
-| K3s Cluster (12 nodes) | ✅ Live — node exporter + kube-state-metrics |
-| TrueNAS | ✅ Live — Graphite exporter |
-| Nginx Proxy Manager | ✅ Live — Blackbox HTTP probe |
-| Home Assistant | ✅ Live — Blackbox HTTP probe |
-| Dashy | ✅ Live — Blackbox HTTP probe |
-| Jellyfin | ✅ Live — Blackbox HTTP probe |
-| UniFi Dream Router | ✅ Live — Unpoller exporter |
-| PrimeStation (Windows) | ✅ Live — Windows exporter |
-| Grafana | ✅ Live — self-monitored |
-| Prometheus | ✅ Live — self-monitored |
-| Public endpoints | ✅ Live — Blackbox external probes |
+| Proxmox HA Cluster (6 nodes) | Live — node exporter + Proxmox exporter |
+| K3s Cluster (12 nodes) | Live — node exporter + kube-state-metrics |
+| TrueNAS | Live — Graphite exporter |
+| Nginx Proxy Manager | Live — Blackbox HTTP probe |
+| Home Assistant | Live — Blackbox HTTP probe |
+| Dashy | Live — Blackbox HTTP probe |
+| Jellyfin | Live — Blackbox HTTP probe |
+| UniFi Dream Router | Live — Unpoller exporter |
+| PrimeStation (Windows) | Live — Windows exporter |
+| Grafana | Live — self-monitored |
+| Prometheus | Live — self-monitored |
+| Public endpoints | Live — Blackbox external probes |
 
 ---
 
@@ -242,7 +242,7 @@ python3 scripts/service-health-check.py
 ## Author
 
 **Chase Dumphord (Ced)**
-Digital Systems Engineer · GE Aerospace · Oxford, MS
+DevOps and Cloud Infrastructure Engineer · GE Aerospace · Oxford, MS
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-chasedumphord.com-0F6E56?style=flat-square)](https://chasedumphord.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-chase--dumphord-0A66C2?style=flat-square)](https://www.linkedin.com/in/chase-dumphord/)
