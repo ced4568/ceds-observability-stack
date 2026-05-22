@@ -1,6 +1,6 @@
 # Ced's Observability Stack Production Monitoring Platform
 
-> A production-style observability platform delivering full-stack visibility across a hybrid homelab infrastructure Proxmox HA cluster, 12-node K3s cluster, network gear, storage, and edge systems. Built on Prometheus, Grafana, and Alertmanager with live dashboards running 24/7.
+> A production-style observability platform delivering full stack visibility across a hybrid homelab infrastructure Proxmox HA cluster, 12 node K3s cluster, network gear, storage, and edge systems. Built on Prometheus, Grafana, and Alertmanager with live dashboards running 24/7.
 
 [![NOC Health](https://img.shields.io/badge/NOC%20Health-100%25-1D9E75?style=flat-square)](#production-dashboards)
 [![Grafana](https://img.shields.io/badge/Grafana-Live-F46800?style=flat-square)](https://grafana.cedshomelab.com)
@@ -14,7 +14,7 @@
 
 This is the observability layer for Ced's HomeLab the system that answers the question: *"Is everything actually working?"*
 
-It collects metrics from every layer of the infrastructure stack, visualizes them in purpose-built Grafana dashboards, and routes alerts through Alertmanager when something breaks. Three production dashboards serve different operational needs an executive NOC view for quick status checks, a deep drill-down dashboard for troubleshooting, and a dedicated K3s cluster dashboard for Kubernetes visibility.
+It collects metrics from every layer of the infrastructure stack, visualizes them in purpose-built Grafana dashboards, and routes alerts through Alertmanager when something breaks. Three production dashboards serve different operational needs an executive NOC view for quick status checks, a deep drill down dashboard for troubleshooting, and a dedicated K3s cluster dashboard for Kubernetes visibility.
 
 This isn't a demo. Prometheus is actively scraping targets. Grafana is displaying live data. The dashboards have been through real incidents and refined based on what actually matters during an outage.
 
@@ -71,7 +71,7 @@ Executive NOC view for quick infrastructure status checks. Designed for portfoli
 ![Production Command Center](./screenshots/production-command-center-v3.png)
 
 **What it shows:**
-- NOC Health Score — single number representing overall infrastructure health
+- NOC Health Score  single number representing overall infrastructure health
 - Core Services UP / DOWN counters
 - Average service latency with trend graph
 - PrimeStation online status
@@ -92,8 +92,8 @@ Full drill-down dashboard for active troubleshooting and infrastructure analysis
 
 **What it shows:**
 - Prometheus target health summary
-- Proxmox HA cluster metrics — nodes, storage, VM status
-- K3s cluster health — nodes, pods, deployments
+- Proxmox HA cluster metrics  nodes, storage, VM status
+- K3s cluster health  nodes, pods, deployments
 - Windows/Network/Backup section — PrimeStation, UniFi, TrueNAS
 - HTTP/TCP probe results via Blackbox Exporter
 - HTTPS response time trends
